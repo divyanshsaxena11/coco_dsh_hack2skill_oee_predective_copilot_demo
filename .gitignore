@@ -1,0 +1,19 @@
+node_modules/
+.next/
+.env.local
+*.log
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+
+# Local credentials and runtime artifacts
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.snowflake/
+.DS_Store
+__pycache__/
+.venv/

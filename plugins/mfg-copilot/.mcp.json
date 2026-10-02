@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "slack": {
+      "command": "C:\\Program Files\\nodejs\\npx.cmd",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-slack"
+      ],
+      "env": {
+        "SLACK_BOT_TOKEN": "",
+        "SLACK_TEAM_ID": "",
+        "PATH": ""
+      }
+    }
+  }
+}

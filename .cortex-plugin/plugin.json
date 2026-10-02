@@ -1,0 +1,20 @@
+{
+  "name": "mfg-copilot",
+  "version": "1.0.0",
+  "description": "Manufacturing OEE & Maintenance Decision Copilot — an ontology-powered Snowflake copilot that explains why OEE is deteriorating, identifies the asset threatening production, and recommends a safe, feasible maintenance response. Enforces deterministic data-quality, safety, and feasibility gates before ranking options; requires role-appropriate human approval before any controlled write; never controls equipment.",
+  "author": {
+    "name": "DataSuperHeros"
+  },
+  "license": "MIT",
+  "entry": ".cortex-plugin/",
+  "minCocoVersion": "1.1.0",
+  "skills": ["./.cortex-plugin/skills"],
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "SnowflakeSqlExecute|snowflake_sql_execute",
+        "command": "node .cortex-plugin/hooks/plant-control-gate.js"
+      }
+    ]
+  }
+}
